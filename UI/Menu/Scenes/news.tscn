@@ -1,0 +1,117 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkc12x8xi5uxx"]
+
+[ext_resource type="Script" path="res://resources/UI/Menu/Scenes/Scripts/news.gd" id="1_cuenr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_04rah"]
+
+[node name="News" type="Panel"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -185.5
+offset_top = -148.0
+offset_right = 185.5
+offset_bottom = 148.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_04rah")
+script = ExtResource("1_cuenr")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 19.0
+grow_horizontal = 2
+text = "hi im news"
+horizontal_alignment = 1
+
+[node name="Close" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -29.0
+offset_top = -17.0
+offset_right = 4.0
+offset_bottom = 17.0
+grow_horizontal = 0
+theme_type_variation = &"XButton"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -152.5
+offset_top = -174.0
+offset_right = 152.5
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 0
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="tabs" type="TabContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+tabs_visible = false
+tab_focus_mode = 0
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="ScrollContainer/tabs"]
+layout_mode = 2
+text = "real patch notes #1"
+
+[node name="Label2" type="Label" parent="ScrollContainer/tabs"]
+visible = false
+layout_mode = 2
+text = "real patch notes #2
+lots of text
+even more text
+this is a whole lot of text
+massive text box
+can we get much more text
+text 2 the textening
+bottom text"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 112.0
+offset_top = 57.0
+offset_right = -112.0
+offset_bottom = 76.0
+grow_horizontal = 2
+text = "the date"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -97.5
+offset_top = 42.0
+offset_right = -31.5
+offset_bottom = 81.0
+grow_horizontal = 0
+text = ">>"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 31.5
+offset_top = 44.0
+offset_right = 97.5
+offset_bottom = 83.0
+text = "<<"
+
+[connection signal="pressed" from="Close" to="." method="close"]
+[connection signal="pressed" from="Button" to="ScrollContainer/tabs" method="select_next_available"]
+[connection signal="pressed" from="Button2" to="ScrollContainer/tabs" method="select_previous_available"]

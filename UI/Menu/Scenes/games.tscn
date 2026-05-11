@@ -1,0 +1,283 @@
+[gd_scene load_steps=5 format=3 uid="uid://4cd6qry1sf8o"]
+
+[ext_resource type="Script" path="res://resources/UI/Menu/Scenes/Scripts/games.gd" id="1_8w6tc"]
+[ext_resource type="PackedScene" uid="uid://27e21abntocj" path="res://world.tscn" id="2_wsvyu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jk5de"]
+font_size = 31
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3iuo0"]
+content_margin_left = 4.0
+content_margin_top = 5.0
+content_margin_right = 6.0
+content_margin_bottom = 4.0
+bg_color = Color(0.168627, 0.188235, 0.266667, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[node name="Games" type="Control" node_paths=PackedStringArray("tabber")]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8w6tc")
+tabber = NodePath("TabContainer")
+world = ExtResource("2_wsvyu")
+open_time = 0.4
+close_time = 0.4
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -412.0
+offset_top = -289.0
+offset_right = 412.0
+offset_bottom = 289.0
+grow_horizontal = 2
+grow_vertical = 2
+clip_tabs = false
+all_tabs_in_front = true
+
+[node name="Join" type="Control" parent="TabContainer"]
+custom_minimum_size = Vector2(792, 517)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TabContainer/Join"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = 164.0
+offset_bottom = 46.0
+text = "Join Game"
+label_settings = SubResource("LabelSettings_jk5de")
+
+[node name="basis" type="Control" parent="TabContainer/Join"]
+anchors_preset = 0
+offset_left = 401.0
+offset_top = 269.9
+offset_right = 401.0
+offset_bottom = 269.9
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="TabContainer/Join/basis"]
+visible = false
+layout_mode = 0
+offset_left = -388.0
+offset_top = -259.75
+offset_right = -237.0
+offset_bottom = -223.75
+text = "Join Game"
+label_settings = SubResource("LabelSettings_jk5de")
+
+[node name="Panel" type="Panel" parent="TabContainer/Join"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 11.0
+offset_top = 85.0
+offset_right = -16.0
+offset_bottom = -59.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"BlockPickerPanel"
+theme_override_styles/panel = SubResource("StyleBoxFlat_3iuo0")
+
+[node name="Status" type="Label" parent="TabContainer/Join/Panel"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -9.5
+offset_bottom = 9.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Security Failed"
+horizontal_alignment = 1
+
+[node name="Filter" type="VBoxContainer" parent="TabContainer/Join"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -171.0
+offset_top = 11.0
+offset_right = -35.0
+offset_bottom = 59.0
+grow_horizontal = 0
+metadata/_edit_group_ = true
+
+[node name="HidePass" type="CheckBox" parent="TabContainer/Join/Filter"]
+layout_mode = 2
+text = "Hide Private"
+
+[node name="HideFull" type="CheckBox" parent="TabContainer/Join/Filter"]
+layout_mode = 2
+text = "Hide Full"
+
+[node name="Ops" type="HBoxContainer" parent="TabContainer/Join"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -51.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 2
+
+[node name="Refresh" type="Button" parent="TabContainer/Join/Ops"]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+text = "Refresh"
+
+[node name="Join" type="Button" parent="TabContainer/Join/Ops"]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+text = "Join"
+
+[node name="Create" type="Control" parent="TabContainer"]
+visible = false
+custom_minimum_size = Vector2(792, 517)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TabContainer/Create"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = 164.0
+offset_bottom = 46.0
+text = "Create Game"
+label_settings = SubResource("LabelSettings_jk5de")
+
+[node name="Controls" type="VBoxContainer" parent="TabContainer/Create"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 7.0
+offset_top = 71.0
+offset_right = -7.0
+offset_bottom = 451.0
+grow_horizontal = 2
+metadata/_edit_lock_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Create/Controls"]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="Name" type="LineEdit" parent="TabContainer/Create/Controls/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+placeholder_text = "Room Name"
+context_menu_enabled = false
+shortcut_keys_enabled = false
+middle_mouse_paste_enabled = false
+drag_and_drop_selection_enabled = false
+
+[node name="Pass" type="LineEdit" parent="TabContainer/Create/Controls/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+placeholder_text = "Password"
+context_menu_enabled = false
+virtual_keyboard_type = 6
+shortcut_keys_enabled = false
+middle_mouse_paste_enabled = false
+drag_and_drop_selection_enabled = false
+secret = true
+secret_character = "*"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="TabContainer/Create/Controls"]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="Player Controls" type="HBoxContainer" parent="TabContainer/Create/Controls/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_constants/separation = 7
+
+[node name="MaxPlayers" type="LineEdit" parent="TabContainer/Create/Controls/HBoxContainer2/Player Controls"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+text = "8"
+placeholder_text = "Max Players"
+max_length = 2
+context_menu_enabled = false
+virtual_keyboard_type = 2
+shortcut_keys_enabled = false
+middle_mouse_paste_enabled = false
+drag_and_drop_selection_enabled = false
+
+[node name="Offline" type="CheckBox" parent="TabContainer/Create/Controls/HBoxContainer2/Player Controls"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "Offline"
+
+[node name="Map Controls" type="HBoxContainer" parent="TabContainer/Create/Controls/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_constants/separation = 5
+
+[node name="Map" type="OptionButton" parent="TabContainer/Create/Controls/HBoxContainer2/Map Controls"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+item_count = 1
+selected = 0
+popup/item_0/text = "Blank"
+popup/item_0/id = 0
+
+[node name="Vault" type="Button" parent="TabContainer/Create/Controls/HBoxContainer2/Map Controls"]
+custom_minimum_size = Vector2(78, 38)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+text = "Load"
+
+[node name="Ops" type="HBoxContainer" parent="TabContainer/Create"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -51.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 2
+
+[node name="Create" type="Button" parent="TabContainer/Create/Ops"]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+text = "Create"
+
+[node name="Close" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 380.0
+offset_top = -264.0
+offset_right = 413.0
+offset_bottom = -230.0
+grow_horizontal = 0
+theme_type_variation = &"XButton"
+
+[connection signal="pressed" from="TabContainer/Create/Controls/HBoxContainer2/Map Controls/Vault" to="." method="_on_vault_pressed"]
+[connection signal="pressed" from="TabContainer/Create/Ops/Create" to="." method="_on_create_pressed"]
+[connection signal="pressed" from="Close" to="." method="close"]

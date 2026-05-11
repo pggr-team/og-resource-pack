@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="BeamProj" load_steps=3 format=3 uid="uid://cmi4qnbolhfse"]
+
+[ext_resource type="Script" path="res://scripts/items/projectiles/BeamProj.cs" id="1_4wy03"]
+[ext_resource type="Texture2D" uid="uid://dkg388pivrwli" path="res://resources/items/weapons/projectiles/images/216_phaserGraphic3.png" id="2_uwpbm"]
+
+[resource]
+script = ExtResource("1_4wy03")
+fade = false
+gibPower = 5.0
+range = 20.0
+name = &""
+texture = ExtResource("2_uwpbm")
+stayTime = 0.06

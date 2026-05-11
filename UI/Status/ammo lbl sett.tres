@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://cdu27kfx3qo7d"]
+
+[ext_resource type="FontFile" uid="uid://cugqwfevhnwlk" path="res://resources/fonts/985_Arial_10pt_st.ttf" id="1_3xnol"]
+
+[resource]
+line_spacing = 0.0
+font = ExtResource("1_3xnol")
+font_size = 10
+shadow_color = Color(0, 0, 0, 1)

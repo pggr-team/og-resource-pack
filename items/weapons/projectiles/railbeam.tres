@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="BeamProj" load_steps=3 format=3 uid="uid://5o7pd1u1cqro"]
+
+[ext_resource type="Script" path="res://scripts/items/projectiles/BeamProj.cs" id="1_c7nts"]
+[ext_resource type="Texture2D" uid="uid://cvqx068v8kfmr" path="res://resources/items/weapons/projectiles/images/206_railBeamGraphic1.png" id="2_fh7t1"]
+
+[resource]
+script = ExtResource("1_c7nts")
+fade = true
+gibPower = 15.0
+range = 60.0
+name = &""
+texture = ExtResource("2_fh7t1")
+stayTime = 1.5

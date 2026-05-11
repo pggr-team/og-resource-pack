@@ -1,0 +1,135 @@
+[gd_scene load_steps=10 format=3 uid="uid://bqluww6xi23kb"]
+
+[ext_resource type="Texture2D" uid="uid://cvp1cs8p7iphx" path="res://resources/UI/Status/1518.png" id="1_javej"]
+[ext_resource type="Shader" path="res://scripts/hud/item_glow.gdshader" id="2_mydu0"]
+[ext_resource type="LabelSettings" uid="uid://cdu27kfx3qo7d" path="res://resources/UI/Status/ammo lbl sett.tres" id="3_5ax4t"]
+[ext_resource type="Texture2D" uid="uid://0fjmwjxbupnw" path="res://resources/UI/Status/1534.png" id="3_oy07c"]
+
+[sub_resource type="GDScript" id="GDScript_jpwxn"]
+script/source = "extends Node
+@export var icon : TextureRect
+@export var highlight : TextureRect
+@export var reload : Range
+@export var ammo : Label
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fnk6i"]
+resource_local_to_scene = true
+shader = ExtResource("2_mydu0")
+shader_parameter/GLOW_COLOR = Color(0, 0, 0, 1)
+shader_parameter/BLOOM_INTENSITY = 2.0
+shader_parameter/BLOOM_INTENSITY_2 = 0.9
+shader_parameter/BLUR_ITERATIONS = 12
+shader_parameter/BLUR_ITERATIONS_2 = 32
+shader_parameter/BLUR_SIZE = 1.0
+shader_parameter/BLUR_SIZE_2 = 9.0
+shader_parameter/BLUR_SUBDIVISIONS_MAX = 48.0
+shader_parameter/BLUR_SUBDIVISIONS_MID = 20.0
+shader_parameter/BLUR_SUBDIVISIONS_MIN = 8.0
+shader_parameter/TEX_SIZE = Vector2(77, 45)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8c4l1"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+anti_aliasing = false
+
+[sub_resource type="Gradient" id="Gradient_6vvma"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_0uncq"]
+gradient = SubResource("Gradient_6vvma")
+width = 1
+
+[node name="Slot" type="TextureRect" node_paths=PackedStringArray("icon", "highlight", "reload", "ammo")]
+texture_filter = 1
+mouse_filter = 2
+texture = ExtResource("1_javej")
+stretch_mode = 2
+script = SubResource("GDScript_jpwxn")
+icon = NodePath("Icon")
+highlight = NodePath("Highlight")
+reload = NodePath("Reload Mask/Reload")
+ammo = NodePath("Ammo")
+
+[node name="Icon" type="TextureRect" parent="."]
+texture_filter = 1
+material = SubResource("ShaderMaterial_fnk6i")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="Highlight" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 1.01639)
+texture = ExtResource("3_oy07c")
+
+[node name="Reload Mask" type="Panel" parent="."]
+clip_children = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 8.0
+offset_right = -6.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8c4l1")
+metadata/_edit_lock_ = true
+
+[node name="Reload" type="TextureProgressBar" parent="Reload Mask"]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+max_value = 1.0
+step = 0.0
+fill_mode = 5
+nine_patch_stretch = true
+texture_progress = SubResource("GradientTexture1D_0uncq")
+tint_progress = Color(0.117647, 0.117647, 0.117647, 0.8)
+
+[node name="Ammo" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -51.0
+offset_top = -22.0
+offset_right = -7.0
+offset_bottom = -9.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "100/100"
+label_settings = ExtResource("3_5ax4t")
+horizontal_alignment = 2

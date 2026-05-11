@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="BulletProj" load_steps=4 format=3 uid="uid://bg5bnm272jv72"]
+
+[ext_resource type="Script" path="res://scripts/items/projectiles/BulletProj.cs" id="1_1w411"]
+[ext_resource type="Texture2D" uid="uid://dxkq1pk826t03" path="res://resources/items/weapons/projectiles/images/496__-SW.png" id="1_dqqwj"]
+[ext_resource type="Texture2D" uid="uid://blt3chy0134bu" path="res://resources/items/weapons/projectiles/images/146__-iH.png" id="2_mogms"]
+
+[resource]
+script = ExtResource("1_1w411")
+startVel = 32.0
+drag = 0.01
+maxAccel = inf
+gravity = 0.1
+maxSearchDistance = 14
+noInternalHit = false
+ignoresDirectHit = false
+ricochets = false
+ricoDamp = 0.8
+ricoSoundMinVel = 2.0
+ricoSoundDiv = 5.0
+size = Vector2(2, 4)
+centeredTex = false
+name = &""
+texture = ExtResource("2_mogms")
+darkTexture = ExtResource("1_dqqwj")
+stayTime = 0.9

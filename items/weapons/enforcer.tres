@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=6 format=3 uid="uid://cb15im1hk713x"]
+
+[ext_resource type="Script" path="res://scripts/classes/DamageHitEffect.cs" id="1_ophp7"]
+[ext_resource type="Texture2D" uid="uid://qvibdpr8n2sh" path="res://resources/items/weapons/images/177_WI_Shotgun2.png" id="2_uocqn"]
+[ext_resource type="Script" path="res://scripts/items/Weapon.cs" id="3_6vkmm"]
+[ext_resource type="Resource" uid="uid://bg5bnm272jv72" path="res://resources/items/weapons/projectiles/_-W4.tres" id="3_dghil"]
+
+[sub_resource type="Resource" id="Resource_on1gb"]
+script = ExtResource("1_ophp7")
+amount = 10.0
+duration = 1
+
+[resource]
+script = ExtResource("3_6vkmm")
+mobility = 1.0
+continious = false
+maxAmmo = 7.0
+reloadTime = 1.4
+fireDelay = 0.7
+automatic = false
+projectile = ExtResource("3_dghil")
+projectilesPerShot = 4
+spread = 1.0
+angleVariance = 10.0
+velocityVariance = 5.0
+hitEffects = [SubResource("Resource_on1gb")]
+ownHitEffects = []
+areaHitEffects = []
+terrainDamage = 3.0
+killReward = 125
+bulletSpawnPosition = 17.0
+aimDisplacement = 10.0
+cameraImpulse = 5.0
+name = &"Shotgun2"
+price = 500
+icon = ExtResource("2_uocqn")
+itemGroup = 3

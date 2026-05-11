@@ -1,0 +1,2 @@
+# Ignore possible accidental godot import files
+*.import

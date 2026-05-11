@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="BulletProj" load_steps=3 format=3 uid="uid://t4bnnowbikar"]
+
+[ext_resource type="Script" path="res://scripts/items/projectiles/BulletProj.cs" id="1_khuxa"]
+[ext_resource type="Texture2D" uid="uid://howapd604mhy" path="res://resources/items/weapons/projectiles/images/213__-91.png" id="2_kbmgp"]
+
+[resource]
+script = ExtResource("1_khuxa")
+startVel = 16.0
+drag = 1.45519e-11
+maxAccel = inf
+gravity = 1.45519e-11
+maxSearchDistance = 14
+noInternalHit = false
+ignoresDirectHit = false
+ricochets = false
+ricoDamp = 0.8
+ricoSoundMinVel = 2.0
+ricoSoundDiv = 5.0
+size = Vector2(3, 3)
+centeredTex = false
+name = &""
+texture = ExtResource("2_kbmgp")
+stayTime = 2.0

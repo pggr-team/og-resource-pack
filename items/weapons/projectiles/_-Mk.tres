@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="BulletProj" load_steps=3 format=3 uid="uid://dbnfqo2lvcy2s"]
+
+[ext_resource type="Script" path="res://scripts/items/projectiles/BulletProj.cs" id="1_brx5x"]
+[ext_resource type="Texture2D" uid="uid://bglvpuo5i0hav" path="res://resources/items/weapons/projectiles/images/495__-IZ.png" id="2_7s16y"]
+
+[resource]
+script = ExtResource("1_brx5x")
+startVel = 22.0
+drag = 1.45519e-11
+maxAccel = inf
+gravity = 0.2
+maxSearchDistance = 14
+noInternalHit = false
+ignoresDirectHit = false
+ricochets = false
+ricoDamp = 0.8
+ricoSoundMinVel = 2.0
+ricoSoundDiv = 5.0
+size = Vector2(2, 2)
+centeredTex = false
+name = &""
+texture = ExtResource("2_7s16y")
+stayTime = 2.0

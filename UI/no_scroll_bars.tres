@@ -1,0 +1,10 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://divlsbx27n56k"]
+
+[ext_resource type="StyleBox" uid="uid://cjfgsv5k6ii5k" path="res://resources/UI/no margin.tres" id="1_ayqae"]
+
+[resource]
+ScrollBar/styles/grabber = ExtResource("1_ayqae")
+ScrollBar/styles/grabber_highlight = ExtResource("1_ayqae")
+ScrollBar/styles/grabber_pressed = ExtResource("1_ayqae")
+ScrollBar/styles/scroll = ExtResource("1_ayqae")
+ScrollBar/styles/scroll_focus = ExtResource("1_ayqae")

@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="BulletProj" load_steps=3 format=3 uid="uid://c5h5qjhktueav"]
+
+[ext_resource type="Script" path="res://scripts/items/projectiles/BulletProj.cs" id="1_fwbkn"]
+[ext_resource type="Texture2D" uid="uid://cynhg3yal3h70" path="res://resources/items/weapons/projectiles/images/571__-Eh.png" id="2_sdwln"]
+
+[resource]
+script = ExtResource("1_fwbkn")
+startVel = 4.5
+drag = -0.05
+maxAccel = 30.0
+gravity = 0.17
+maxSearchDistance = 14
+noInternalHit = false
+ignoresDirectHit = false
+ricochets = false
+ricoDamp = 0.8
+ricoSoundMinVel = 5.0
+ricoSoundVel = 5.0
+size = Vector2(5, 5)
+centeredTex = false
+name = &""
+texture = ExtResource("2_sdwln")
+stayTime = 4.0

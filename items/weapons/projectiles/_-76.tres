@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="BulletProj" load_steps=3 format=3 uid="uid://ixsjjddmhgxt"]
+
+[ext_resource type="Script" path="res://scripts/items/projectiles/BulletProj.cs" id="1_hucru"]
+[ext_resource type="Texture2D" uid="uid://igtvhs8q2qjb" path="res://resources/items/weapons/projectiles/images/578__-Fa.png" id="2_v3rv8"]
+
+[resource]
+script = ExtResource("1_hucru")
+startVel = 30.0
+drag = 0.01
+maxAccel = inf
+gravity = 0.13
+maxSearchDistance = 14
+noInternalHit = false
+ignoresDirectHit = false
+ricochets = false
+ricoDamp = 0.8
+ricoSoundMinVel = 2.0
+ricoSoundDiv = 5.0
+size = Vector2(2, 2)
+centeredTex = false
+name = &""
+texture = ExtResource("2_v3rv8")
+stayTime = 1.2

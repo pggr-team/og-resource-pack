@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=6 format=3 uid="uid://bwhs0fx2gpga4"]
+
+[ext_resource type="Script" path="res://scripts/classes/DamageHitEffect.cs" id="1_8nab2"]
+[ext_resource type="Texture2D" uid="uid://c2fqoxc1e8jke" path="res://resources/items/weapons/images/138_WI_P3.png" id="2_4rku0"]
+[ext_resource type="Resource" uid="uid://c2mfye0vyljrq" path="res://resources/items/weapons/projectiles/_-m0.tres" id="3_tjsqt"]
+[ext_resource type="Script" path="res://scripts/items/Weapon.cs" id="4_ttavi"]
+
+[sub_resource type="Resource" id="Resource_h3kro"]
+script = ExtResource("1_8nab2")
+amount = 10.0
+duration = 1
+
+[resource]
+script = ExtResource("4_ttavi")
+mobility = 1.3
+continious = true
+maxAmmo = 15.0
+reloadTime = 1.3
+fireDelay = 0.05
+automatic = true
+projectile = ExtResource("3_tjsqt")
+projectilesPerShot = 1
+spread = 5.0
+angleVariance = 30.0
+velocityVariance = 3.0
+hitEffects = [SubResource("Resource_h3kro")]
+ownHitEffects = []
+areaHitEffects = []
+terrainDamage = 3.0
+killReward = 150
+bulletSpawnPosition = 17.0
+aimDisplacement = 10.0
+cameraImpulse = 3.0
+name = &"P3"
+price = 300
+icon = ExtResource("2_4rku0")
+itemGroup = 1

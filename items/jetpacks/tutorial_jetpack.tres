@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Jetpack" load_steps=4 format=3 uid="uid://dgm8dp5va4338"]
+
+[ext_resource type="Texture2D" uid="uid://c0drpuveqqcvu" path="res://resources/items/jetpacks/images/My First Jetpack.png" id="1_hc2id"]
+[ext_resource type="Script" path="res://scripts/items/Jetpack.cs" id="1_qbn3s"]
+[ext_resource type="Material" uid="uid://dqvqsivbncee2" path="res://resources/items/jetpacks/particles/jetpack standard.tres" id="2_ofi5j"]
+
+[resource]
+script = ExtResource("1_qbn3s")
+thrust = 1.1
+speed = 7.0
+fuel = 100.0
+consumptionRate = 1.0
+rechargeRate = 0.5
+particles = ExtResource("2_ofi5j")
+name = &"jetpackTutorial"
+price = 50
+icon = ExtResource("1_hc2id")
+itemGroup = 6

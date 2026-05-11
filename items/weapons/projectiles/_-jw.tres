@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="BulletProj" load_steps=4 format=3 uid="uid://dh4n41t256wdc"]
+
+[ext_resource type="AudioStream" uid="uid://d3qf7na5x67dg" path="res://resources/items/weapons/projectiles/sounds/ricoRandom.tres" id="1_jil2o"]
+[ext_resource type="Script" path="res://scripts/items/projectiles/BulletProj.cs" id="1_vt787"]
+[ext_resource type="Texture2D" uid="uid://dxkq1pk826t03" path="res://resources/items/weapons/projectiles/images/496__-SW.png" id="2_ogolq"]
+
+[resource]
+script = ExtResource("1_vt787")
+startVel = 25.0
+drag = 0.01
+maxAccel = inf
+gravity = 0.1
+maxSearchDistance = 14
+noInternalHit = false
+ignoresDirectHit = false
+ricochets = true
+ricoDamp = 0.8
+ricoSound = ExtResource("1_jil2o")
+ricoSoundMinVel = 2.0
+ricoSoundDiv = 5.0
+size = Vector2(2, 2)
+centeredTex = false
+name = &""
+texture = ExtResource("2_ogolq")
+stayTime = 1.0

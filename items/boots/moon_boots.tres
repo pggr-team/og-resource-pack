@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Boots" load_steps=3 format=3 uid="uid://bhs3c6yj31t1a"]
+
+[ext_resource type="Texture2D" uid="uid://dis38ybdt46fp" path="res://resources/items/boots/images/Moon Boots.png" id="1_2jvm0"]
+[ext_resource type="Script" path="res://scripts/items/Boots.cs" id="2_v0cy4"]
+
+[resource]
+script = ExtResource("2_v0cy4")
+speed = 1.15
+jumpHeight = 1.27
+fallDamage = 1.0
+name = &"moonBoots"
+price = 600
+icon = ExtResource("1_2jvm0")
+itemGroup = 7

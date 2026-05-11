@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Boots" load_steps=3 format=3 uid="uid://ph8dk5x0c0dt"]
+
+[ext_resource type="Texture2D" uid="uid://c21xxll318esr" path="res://resources/items/boots/images/Kinetic Boots.png" id="1_ujfk3"]
+[ext_resource type="Script" path="res://scripts/items/Boots.cs" id="2_g1jsh"]
+
+[resource]
+script = ExtResource("2_g1jsh")
+speed = 1.15
+jumpHeight = 1.05
+fallDamage = 0.2
+name = &"kineticBoots"
+price = 600
+icon = ExtResource("1_ujfk3")
+itemGroup = 7

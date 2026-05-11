@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Jetpack" load_steps=4 format=3 uid="uid://dqki3nf6egr5t"]
+
+[ext_resource type="Texture2D" uid="uid://f1xjoys03wgn" path="res://resources/items/jetpacks/images/Atomic Jetpack.png" id="1_7a246"]
+[ext_resource type="Script" path="res://scripts/items/Jetpack.cs" id="1_a027a"]
+[ext_resource type="Material" uid="uid://cs8uhgavjaxyx" path="res://resources/items/jetpacks/particles/jetpack atomic.tres" id="2_hm4jk"]
+
+[resource]
+script = ExtResource("1_a027a")
+thrust = 1.5
+speed = 8.0
+fuel = 300.0
+consumptionRate = 1.0
+rechargeRate = 0.4
+particles = ExtResource("2_hm4jk")
+name = &"jetpackAtomic"
+price = 2000
+icon = ExtResource("1_7a246")
+itemGroup = 6

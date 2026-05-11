@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="BeamProj" load_steps=3 format=3 uid="uid://dssbxnr5lg4q8"]
+
+[ext_resource type="Script" path="res://scripts/items/projectiles/BeamProj.cs" id="1_hybq2"]
+[ext_resource type="Texture2D" uid="uid://dcsyc4kneq1xu" path="res://resources/items/weapons/projectiles/images/179_shockRifleGraphic1.png" id="2_7uo0y"]
+
+[resource]
+script = ExtResource("1_hybq2")
+fade = true
+gibPower = 12.0
+range = 60.0
+name = &""
+texture = ExtResource("2_7uo0y")
+stayTime = 0.6

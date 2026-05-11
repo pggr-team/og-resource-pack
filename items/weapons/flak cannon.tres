@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=6 format=3 uid="uid://bjmu7ygbpa6d5"]
+
+[ext_resource type="Script" path="res://scripts/classes/DamageHitEffect.cs" id="1_ssdcu"]
+[ext_resource type="Texture2D" uid="uid://0vmbjawy76ci" path="res://resources/items/weapons/images/753__-mh.png" id="2_q46d7"]
+[ext_resource type="Resource" uid="uid://dh4n41t256wdc" path="res://resources/items/weapons/projectiles/_-jw.tres" id="3_mdtjx"]
+[ext_resource type="Script" path="res://scripts/items/Weapon.cs" id="4_44h7k"]
+
+[sub_resource type="Resource" id="Resource_on1gb"]
+script = ExtResource("1_ssdcu")
+amount = 12.0
+duration = 1
+
+[resource]
+script = ExtResource("4_44h7k")
+mobility = 0.95
+continious = false
+maxAmmo = 5.0
+reloadTime = 1.5
+fireDelay = 0.7
+automatic = false
+projectile = ExtResource("3_mdtjx")
+projectilesPerShot = 6
+spread = 4.0
+angleVariance = 4.0
+velocityVariance = 12.0
+hitEffects = [SubResource("Resource_on1gb")]
+ownHitEffects = []
+areaHitEffects = []
+terrainDamage = 0.0
+killReward = 100
+bulletSpawnPosition = 12.0
+aimDisplacement = 10.0
+cameraImpulse = 5.0
+name = &"Flakcannon"
+price = 800
+icon = ExtResource("2_q46d7")
+itemGroup = 3

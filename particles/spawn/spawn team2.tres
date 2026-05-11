@@ -1,0 +1,40 @@
+[gd_resource type="ShaderMaterial" script_class="Particle" load_steps=4 format=3 uid="uid://bi7eo8f318fqk"]
+
+[ext_resource type="Script" path="res://scripts/effects/Particle.cs" id="1_brmgq"]
+[ext_resource type="Shader" path="res://scripts/effects/particle2d.gdshader" id="2_kw61l"]
+[ext_resource type="Texture2D" uid="uid://ciwgjrxgcd65v" path="res://resources/particles/images/star.svg" id="3_36dw4"]
+
+[resource]
+shader = ExtResource("2_kw61l")
+shader_parameter/random_vel = false
+shader_parameter/emitter_velocity_ratio = 0.0
+shader_parameter/initial_velocity = Vector2(0, -100)
+shader_parameter/initial_velocity_size = Vector2(0, 100)
+shader_parameter/gravity = Vector2(0, -50)
+shader_parameter/random_drift = Vector2(0, 0)
+shader_parameter/drag = 0.0
+shader_parameter/spawn_radius = -1.0
+shader_parameter/spawn_box = Vector4(5, 10, 25, 50)
+shader_parameter/initial_angle_min = 0.0
+shader_parameter/initial_angle_max = 0.0
+shader_parameter/angular_velocity_min = 1.0
+shader_parameter/angular_velocity_max = 2.0
+shader_parameter/scale_min = 3.0
+shader_parameter/scale_max = 3.0
+shader_parameter/scale_div = 64.0
+shader_parameter/shrink = false
+shader_parameter/anim_speed_min = 0.0
+shader_parameter/anim_speed_max = 0.0
+shader_parameter/anim_offset_min = 0.0
+shader_parameter/anim_offset_max = 0.0
+shader_parameter/lifetime_min = 0.2
+shader_parameter/lifetime_max = 1.3
+shader_parameter/color_value = Color(0, 0.2, 0.8, 1)
+shader_parameter/color_value_2 = Color(0.4, 0.8, 1, 1)
+shader_parameter/fade = true
+shader_parameter/alpha_start = 1.0
+shader_parameter/alpha_end = 0.0
+script = ExtResource("1_brmgq")
+texture = ExtResource("3_36dw4")
+particles = 50
+blast = true

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Jetpack" load_steps=4 format=3 uid="uid://v07rodnjsv1x"]
+
+[ext_resource type="Script" path="res://scripts/items/Jetpack.cs" id="1_5cioj"]
+[ext_resource type="Texture2D" uid="uid://bna7bj1fc7bk0" path="res://resources/items/jetpacks/images/Standard Jetpack.png" id="1_x4opv"]
+[ext_resource type="Material" uid="uid://dqvqsivbncee2" path="res://resources/items/jetpacks/particles/jetpack standard.tres" id="2_70ga7"]
+
+[resource]
+script = ExtResource("1_5cioj")
+thrust = 1.5
+speed = 8.0
+fuel = 100.0
+consumptionRate = 1.0
+rechargeRate = 0.5
+particles = ExtResource("2_70ga7")
+name = &"jetpackStandard"
+price = 200
+icon = ExtResource("1_x4opv")
+itemGroup = 6

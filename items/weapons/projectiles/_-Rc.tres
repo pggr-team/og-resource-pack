@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="BulletProj" load_steps=3 format=3 uid="uid://bu04hgwpucysq"]
+
+[ext_resource type="Script" path="res://scripts/items/projectiles/BulletProj.cs" id="1_crv2y"]
+[ext_resource type="Texture2D" uid="uid://dhr318sh6up1p" path="res://resources/items/weapons/projectiles/images/192__-4C.png" id="2_cobht"]
+
+[resource]
+script = ExtResource("1_crv2y")
+startVel = 10.0
+drag = -0.05
+maxAccel = inf
+gravity = 0.1
+maxSearchDistance = 14
+noInternalHit = false
+ignoresDirectHit = false
+ricochets = false
+ricoDamp = 0.8
+ricoSoundMinVel = 5.0
+ricoSoundVel = 5.0
+size = Vector2(5, 5)
+centeredTex = false
+name = &""
+texture = ExtResource("2_cobht")
+stayTime = 1.0

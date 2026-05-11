@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=6 format=3 uid="uid://dfmx2tjurbnna"]
+
+[ext_resource type="Script" path="res://scripts/classes/DamageHitEffect.cs" id="1_ovfmq"]
+[ext_resource type="Texture2D" uid="uid://cedvtcwsvb0mc" path="res://resources/items/weapons/images/278__-FX.png" id="2_qhs5v"]
+[ext_resource type="Resource" uid="uid://cm47unpggg73b" path="res://resources/items/weapons/projectiles/lightning.tres" id="2_x7stw"]
+[ext_resource type="Script" path="res://scripts/items/Weapon.cs" id="3_xjfiu"]
+
+[sub_resource type="Resource" id="Resource_bk3k5"]
+script = ExtResource("1_ovfmq")
+amount = 0.0
+duration = 1
+
+[resource]
+script = ExtResource("3_xjfiu")
+mobility = 1.1
+continious = true
+maxAmmo = 30.0
+reloadTime = 1.3
+fireDelay = 0.06
+automatic = true
+projectile = ExtResource("2_x7stw")
+projectilesPerShot = 1
+spread = 0.0
+angleVariance = 0.0
+velocityVariance = 0.0
+hitEffects = [SubResource("Resource_bk3k5")]
+ownHitEffects = []
+areaHitEffects = []
+terrainDamage = 3.0
+killReward = 125
+bulletSpawnPosition = 17.0
+aimDisplacement = 10.0
+cameraImpulse = 0.0
+name = &"lg"
+price = 700
+icon = ExtResource("2_qhs5v")
+itemGroup = 4

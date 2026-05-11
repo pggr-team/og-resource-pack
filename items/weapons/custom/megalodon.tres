@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=5 format=3 uid="uid://ljemhq1dwn58"]
+
+[ext_resource type="Script" path="res://scripts/items/Weapon.cs" id="1_7rn8r"]
+[ext_resource type="Script" path="res://scripts/items/projectiles/BeamProj.cs" id="1_su7c2"]
+[ext_resource type="Texture2D" uid="uid://dkg388pivrwli" path="res://resources/items/weapons/projectiles/images/216_phaserGraphic3.png" id="2_gj3w3"]
+
+[sub_resource type="Resource" id="Resource_jfr0x"]
+script = ExtResource("1_su7c2")
+fade = true
+gibPower = 5.0
+range = 15.0
+name = &""
+texture = ExtResource("2_gj3w3")
+stayTime = 0.18
+
+[resource]
+script = ExtResource("1_7rn8r")
+mobility = 0.79
+continious = true
+maxAmmo = 75.0
+reloadTime = 1.0
+fireDelay = 0.03
+automatic = true
+projectile = SubResource("Resource_jfr0x")
+projectilesPerShot = 2
+spread = 2.0
+angleVariance = 25.0
+velocityVariance = 6.0
+hitEffects = []
+ownHitEffects = []
+areaHitEffects = []
+terrainDamage = 5.0
+killReward = 100
+bulletSpawnPosition = 17.0
+aimDisplacement = 10.0
+cameraImpulse = 0.0
+name = &"megalodon"
+price = 2500
+itemGroup = 5

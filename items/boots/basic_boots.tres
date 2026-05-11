@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Boots" load_steps=3 format=3 uid="uid://c6otwmr6jf714"]
+
+[ext_resource type="Script" path="res://scripts/items/Boots.cs" id="1_dncfy"]
+[ext_resource type="Texture2D" uid="uid://btbrvjbrgo11d" path="res://resources/items/boots/images/Basic Boots.png" id="1_wurd4"]
+
+[resource]
+script = ExtResource("1_dncfy")
+speed = 1.1
+jumpHeight = 1.05
+fallDamage = 1.0
+name = &"basicBoots"
+price = 200
+icon = ExtResource("1_wurd4")
+itemGroup = 7

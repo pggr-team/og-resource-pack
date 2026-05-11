@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="BulletProj" load_steps=4 format=3 uid="uid://c83lch2qol5o5"]
+
+[ext_resource type="Material" uid="uid://cq2psyyqpmowp" path="res://resources/items/weapons/projectiles/particles/rocket.tres" id="1_3mw0m"]
+[ext_resource type="Script" path="res://scripts/items/projectiles/BulletProj.cs" id="1_v67qe"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_kim3s"]
+size = Vector2(10, 5)
+
+[resource]
+script = ExtResource("1_v67qe")
+startVel = 5.0
+drag = -0.05
+maxAccel = 40.0
+gravity = 1.45519e-11
+maxSearchDistance = 14
+noInternalHit = false
+ignoresDirectHit = false
+particle = ExtResource("1_3mw0m")
+ricochets = true
+ricoDamp = 0.8
+ricoSoundMinVel = 2.0
+ricoSoundDiv = 5.0
+size = Vector2(4, 4)
+centeredTex = false
+name = &""
+texture = SubResource("PlaceholderTexture2D_kim3s")
+stayTime = 30.0

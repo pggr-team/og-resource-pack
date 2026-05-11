@@ -1,0 +1,15 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=4 format=3 uid="uid://d3qf7na5x67dg"]
+
+[ext_resource type="AudioStream" uid="uid://blb76cp60midj" path="res://resources/items/weapons/projectiles/sounds/23_rico8.wav" id="1_rsovx"]
+[ext_resource type="AudioStream" uid="uid://bbwj7rwqf2kld" path="res://resources/items/weapons/projectiles/sounds/22_rico9.wav" id="2_m6a1o"]
+[ext_resource type="AudioStream" uid="uid://bso457h6y4q66" path="res://resources/items/weapons/projectiles/sounds/31_rico10.wav" id="3_pmfb2"]
+
+[resource]
+playback_mode = 1
+streams_count = 3
+stream_0/stream = ExtResource("1_rsovx")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("2_m6a1o")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("3_pmfb2")
+stream_2/weight = 1.0

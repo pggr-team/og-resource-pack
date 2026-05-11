@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="BeamProj" load_steps=3 format=3 uid="uid://cm47unpggg73b"]
+
+[ext_resource type="Script" path="res://scripts/items/projectiles/BeamProj.cs" id="1_651ea"]
+[ext_resource type="Texture2D" uid="uid://ctnc3ee2ar8yk" path="res://resources/items/weapons/projectiles/images/lg.tres" id="2_bix28"]
+
+[resource]
+script = ExtResource("1_651ea")
+fade = false
+gibPower = 5.0
+range = 60.0
+name = &""
+texture = ExtResource("2_bix28")
+stayTime = 0.06

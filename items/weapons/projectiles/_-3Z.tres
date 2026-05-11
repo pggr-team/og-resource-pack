@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="BulletProj" load_steps=3 format=3 uid="uid://5lu8yijndh6r"]
+
+[ext_resource type="Script" path="res://scripts/items/projectiles/BulletProj.cs" id="1_q3fv1"]
+[ext_resource type="Texture2D" uid="uid://bem5up6kldpqo" path="res://resources/items/weapons/projectiles/images/381_grenade1GraphicData.png" id="2_in65b"]
+
+[resource]
+script = ExtResource("1_q3fv1")
+startVel = 17.0
+drag = 0.01
+maxAccel = inf
+gravity = 0.3
+maxSearchDistance = 14
+noInternalHit = false
+ignoresDirectHit = false
+ricochets = true
+ricoDamp = 0.8
+ricoSoundMinVel = 2.0
+ricoSoundDiv = 5.0
+size = Vector2(4, 4)
+centeredTex = false
+name = &""
+texture = ExtResource("2_in65b")
+stayTime = 3.0
